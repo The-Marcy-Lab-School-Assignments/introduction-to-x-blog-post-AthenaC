@@ -244,19 +244,80 @@ const styles = StyleSheet.create({
 
 ## Navigation Methods
 
-### Three Types of Navigation
+### `NavigationContainer` Component
 
-> #### Stack Navigation
->
+In React Navigation, you must wrap all your screens inside a special component called NavigationContainer. It’s like the root manager that keeps your navigation working properly.
+
+```js
+import { NavigationContainer } from "@react-navigation/native";
+
+const App = () => (
+  <NavigationContainer>
+    {/* Insert your navigators and screens here */}
+  </NavigationContainer>
+);
+```
+
+### Types of Navigation & Their Factory Methods:
+
+React Navigation supports different ways to move between screens. Each navigation type is created using a factory method that follows the pattern:
+
+```js
+create<Type>Navigator().
+```
+
+Here are the 3 most common types:
+
+#### Stack Navigation
+
 > Imagine stacking pages on top of each other like a **stack of books**. You move from screen to screen, and each one sits on top of the previous one. Users can press a back button to "pop" the top screen off and go back.
 >
-> #### Tab Navigation
+> - `createStackNavigator`: To make a stack navigation (the "book stack" metaphor). It gives you a Navigator component that holds all your stack screens.
 >
+> ```js
+> const Stack = createStackNavigator();
+>
+> <Stack.Navigator>
+>   <Stack.Screen name="Feed" component={FeedScreen} />
+>   <Stack.Screen name="Catalog" component={CatalogScreen} />
+> </Stack.Navigator>;
+> ```
+
+#### Tab Navigation
+
 > Think of a **tab bar** at the bottom of your app (like on Instagram or Twitter) where you can tap different icons to switch between pages instantly.
 >
-> #### Drawer Navigation
+> - `createBottomTabNavigator`: To make a bottom tab bar (like Instagram’s tab bar).
 >
-> A **hidden menu** that slides in from the side when you swipe or tap a menu button (like the hamburger menu in many apps). It lets users switch between screens quickly.
+> ```js
+> const Tab = createBottomTabNavigator();
+>
+> <Tab.Navigator>
+>   <Tab.Screen name="Feed" component={FeedScreen} />
+>   <Tab.Screen name="Catalog" component={CatalogScreen} />
+> </Tab.Navigator>;
+> ```
+
+#### Drawer Navigation
+
+> A **hidden menu** that slides in from the side when you swipe or tap a menu button (like the hamburger menu in many apps). It lets users switch between different screens quickly. It’s perfect for showing an app menu, settings, or additional sections that don’t need to be front-and-center all the time.
+>
+> - `createDrawerNavigator`: to create a drawer navigation with a hidden menu that slides out from the side.
+>
+> ```js
+> import { createDrawerNavigator } from "@react-navigation/drawer";
+>
+> const Drawer = createDrawerNavigator();
+>
+> <Drawer.Navigator>
+>   <Drawer.Screen name="Feed" component={FeedScreen} />
+>   <Drawer.Screen name="Catalog" component={CatalogScreen} />
+> </Drawer.Navigator>;
+> ```
+
+### `useNavigation` Hook
+
+> The `useNavigation` hook lets you navigate between screens programmatically. It's like a remote control for navigation, and you can use it inside any component, not just screen components.
 
 ## Compare and Contrast
 
@@ -267,3 +328,7 @@ const styles = StyleSheet.create({
 
 - Wrap things up
 - Provide links to resources that you used to help you learn the language.
+
+```
+
+```
