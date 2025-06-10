@@ -67,7 +67,7 @@ You can start a React Native project using two popular approaches:
       # Notifications (`expo-notifications`)
       ```
 
-    - **Expo Snack**: a web-based playground where you can write React Native snippets and run them in the browser.
+    - **Expo Snack**: a web-based playground where you can write React Native snippets and run them in the browser.  
       _Steps_:
       1. Visit [snack.expo.dev](https://snack.expo.dev/)
       2. Write your code in the online editor.
