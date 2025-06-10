@@ -11,11 +11,11 @@ By Athena Chang
 - What is it used for? How popular is it? Who is it for (developers or users)?
 - Incorporate real-world analogies when appropriate and useful. --->
 
-React Native is an open-source framework for building Android and iOS applications. React Native lets developers write using JavaScript, TypeScript (superset / father of JavaScript), and React, which are then compiled into native app components. "Native code" are instructions for how to operate the React Native framework on different platforms, such as iOS and Android. This gives you the near-native performance with the flexibility and ease of web development.
+React Native is an open-source framework for building Android and iOS applications. It allows developers to write apps using JavaScript and TypeScript (a superset of JavaScript that adds static typing), combined with React, which are then compiled into native app components. Native code refers to platform-specific instructions that React Native generates, enabling near-native performance with the flexibility and ease of web development.
 
-Meta released React Native in 2015 and by 2018, React Native had the 2nd highest number of contributors from individuals and companies around the world than any repositories in GitHub. React Native is widely popular and used in thousands of apps, which you most likely have used.
+Meta released React Native in 2015, and by 2018 it had the second highest number of contributors from individuals and companies worldwide among all GitHub repositories. React Native is widely popular and used in thousands of apps you’ve likely interacted with.
 
-React Native is like a language translator who takes a single language (JavaScript/TypeScript/React) and interprets it fluently for different countries (iOS and Android). You speak one, and your message is understood everywhere.
+Think of React Native like a language translator who takes a single language (JavaScript/TypeScript/React) and fluently interprets it for different countries (iOS and Android). You speak one language, and your message is understood everywhere.
 
 <!--- ## Core syntax/features. 
 
@@ -27,17 +27,17 @@ React Native is like a language translator who takes a single language (JavaScri
 
 You can start a React Native project using two popular approaches:
 
-- **Expo**: Beginner-friendly platform, no native code required at first, easy to set up, and lots of pre-built APIs. It helps make universal React apps that helps you develop, build, deploy, and quickly iterate on mobile apps.
+- **Expo**: Beginner-friendly platform, no native code required at first, easy to set up, and lots of pre-built APIs to speend development. Expo helps you develop, build, deploy, and iterate on universal React apps quickly.
 
   - _Features_:
 
-    - **Expo CLI**: a tool to create, manage, and develop your apps
+    - **Expo CLI**: A tool to create, manage, and develop your apps.
 
       - _Setup_:
 
       ```bash
       # Installs Expo command-line tools globally
-      npm install -g expo-cli
+      npm install -g expo
 
       # Creates a new Expo app
       expo init my-first-app
@@ -46,9 +46,9 @@ You can start a React Native project using two popular approaches:
       cd my-first-app
       ```
 
-    - **Expo Go**: an app you can download on your phone to “view” your app in development
+    - **Expo Go**: An app for your phone to preview your app during development.
 
-      - _Setup_:
+      - _Usage_:
 
       ```bash
       # Download Expo Go app then run...
@@ -56,7 +56,7 @@ You can start a React Native project using two popular approaches:
       # Scan the QR code with the Expo Go app on your phone to run your app instantly!
       ```
 
-    - **Expo SDK**: a modular set of packages that provide access to native APIs, like:
+    - **Expo SDK**: A modular set of packages providing access to native device APIs, such as:
 
       - Installation:
 
@@ -70,37 +70,38 @@ You can start a React Native project using two popular approaches:
       #            ...etc.
       ```
 
-    - **Expo Snack**: a web-based playground where you can write React Native snippets and run them in the browser.
+    - **Expo Snack**: A web-based playground to write and run React Native snippets in your browser.
       - _Steps_:
         1. Visit [snack.expo.dev](https://snack.expo.dev/)
         2. Write your code in the online editor.
-        3. Use the QR code to preview on your device (Expo Go app).
-        4. Share the link with others to collaborate or demonstrate.
+        3. Use the QR code to preview on your device with Expo Go.
+        4. Share your project link to collaborate or demonstrate.
 
-- **React Native CLI**: More advanced, lets you work with native code directly, needed for some custom native modules.
+- **React Native CLI**: More advanced setup allowing direct work with native code, required for some custom native modules or integrations.
 
   - _Setup_:
 
   ```bash
-  # Installing React Native CLI
-  npm install -g react-native-cli
-
-  # Creating a new project
+  # Create a new React Native project using CLI (no global install needed)
   npx react-native init my-first-app
 
-  # Move into my-first-app folder
+  # Navigate into your project folder
   cd my-first-app
 
-  # Running the app for iOS (macOS only)
+  # Run the app on iOS (macOS only)
   npx react-native run-ios
 
-  # For Android (requires emulator or connected device)
+  # Run the app on Android (requires emulator or connected device)
   npx react-native run-android
   ```
 
+  > **Note**: React Native CLI requires you to install Android Studio for Android development and Xcode for iOS development.
+
 ## Core Concepts
 
-**_Core components_** are the basic building blocks provided by React Native that you can use to build your app’s user interface. Think of them like Lego bricks that come ready-to-use! Here are some examples:
+**_Core components_** are the building blocks provided by React Native for creating your app’s user interface. Think of them like Lego bricks ready to assemble!
+
+Examples include:
 
 - `<View>`: A container that can hold other components.
 - `<Text>`: Displays text.
@@ -168,7 +169,7 @@ const CoreComponentsExample = () => {
 };
 ```
 
-**_Custom components_** are like reusable building blocks you create using core components. For example, you might build a reusable Box component:
+**_Custom components_** are reusable building blocks you create from core components:
 
 ```js
 const App = () => (
@@ -188,7 +189,11 @@ export const Box = ({ color }) => (
 
 ## Styling
 
-Components can be styled using the `style={}` property, which accepts objects as inline-styling, style created by `StyleSheet`, or an array combining multiple styles.
+You style components using the style prop, which can accept:
+
+- Inline styles (JS objects),
+- Styles created with `StyleSheet`,
+- Or arrays combining multiple styles.
 
 ```js
 // Using StyleSheet
@@ -199,7 +204,7 @@ Components can be styled using the `style={}` property, which accepts objects as
 <Text style={[styles.heading, { color: 'red' }]} />
 ```
 
-`StyleSheet` helps organize and optimize your styles. It’s similar to CSS but written in JavaScript objects.
+`StyleSheet` helps organize and optimize your styles and is similar to CSS but uses JavaScript objects.
 
 ```js
 import { StyleSheet } from "react-native";
@@ -240,6 +245,7 @@ const styles = StyleSheet.create({
   box: {
     width: 100,
     height: 100,
+    margin: 10,
   },
 });
 ```
@@ -248,7 +254,7 @@ const styles = StyleSheet.create({
 
 ### `NavigationContainer` Component
 
-In React Navigation, you must wrap all your screens inside a special component called NavigationContainer. It’s like the root manager that keeps your navigation working properly.
+In React Navigation, wrap all your navigators inside `<NavigationContainer>` — it acts as the root manager of your navigation state.
 
 ```js
 import { NavigationContainer } from "@react-navigation/native";
@@ -262,7 +268,19 @@ const App = () => (
 
 ### Types of Navigation & Their Factory Methods:
 
-React Navigation supports different ways to move between screens. Each navigation type is created using a factory method that follows the pattern:
+Before we can start implementing React Navigations, we need to install these core dependencies:
+
+```bash
+npm install @react-navigation/native
+npm install @react-navigation/stack
+npm install @react-navigation/bottom-tabs
+npm install @react-navigation/drawer
+npm install react-native-screens react-native-safe-area-context react-native-gesture-handler react-native-reanimated
+```
+
+> (Use `expo install` for Expo projects to get compatible versions.)
+
+React Navigation offers various navigation patterns, each created with a factory function:
 
 ```js
 create<Type>Navigator().
@@ -272,7 +290,7 @@ Here are the 3 most common types:
 
 #### Stack Navigation
 
-> Imagine stacking pages on top of each other like a **stack of books**. You move from screen to screen, and each one sits on top of the previous one. Users can press a back button to "pop" the top screen off and go back.
+> Like a stack of books, screens are stacked on top of each other. You can move forward by pushing screens and go back by popping the top screen.
 >
 > - `createStackNavigator`: To make a stack navigation (the "book stack" metaphor). It gives you a Navigator component that holds all your stack screens.
 >
@@ -287,7 +305,7 @@ Here are the 3 most common types:
 
 #### Tab Navigation
 
-> Think of a **tab bar** at the bottom of your app (like on Instagram or Twitter) where you can tap different icons to switch between pages instantly.
+> A tab bar usually at the bottom lets users switch between pages quickly.
 >
 > - `createBottomTabNavigator`: To make a bottom tab bar (like Instagram’s tab bar).
 >
@@ -302,7 +320,7 @@ Here are the 3 most common types:
 
 #### Drawer Navigation
 
-> A **hidden menu** that slides in from the side when you swipe or tap a menu button (like the hamburger menu in many apps). It lets users switch between different screens quickly. It’s perfect for showing an app menu, settings, or additional sections that don’t need to be front-and-center all the time.
+> A hidden sliding menu from the side (hamburger menu) for extra navigation options.
 >
 > - `createDrawerNavigator`: to create a drawer navigation with a hidden menu that slides out from the side.
 >
@@ -320,6 +338,26 @@ Here are the 3 most common types:
 ### `useNavigation` Hook
 
 > The `useNavigation` hook lets you navigate between screens programmatically. It's like a remote control for navigation, and you can use it inside any component, not just screen components.
+>
+> ```js
+> import React from "react";
+> import { Button } from "react-native";
+> import { useNavigation } from "@react-navigation/native";
+>
+> // A simple reusable button component
+> const GoToProfileButton = () => {
+>   const navigation = useNavigation();
+>
+>   return (
+>     <Button
+>       title="Go to Profile"
+>       onPress={() => navigation.navigate("Profile")}
+>     />
+>   );
+> };
+>
+> export default GoToProfileButton;
+> ```
 
 ## Compare and Contrast
 
@@ -328,27 +366,28 @@ Here are the 3 most common types:
 
 ### React Native's Alternative
 
-- **Flutter**: This is a popular choice from Google that uses the Dart programming language. Flutter provides a single codebase for iOS and Android with a built-in UI toolkit. Many developers find its performance and consistent design appealing, though learning Dart can add an extra learning curve.
+- **Flutter**: A Google framework using Dart language. It compiles to native code and offers a consistent UI with a rich widget set. Learning Dart is an extra step, but many love its performance and design flexibility.
 
-- **Native Development**: You can also write separate apps using Swift/Objective-C for iOS and Java/Kotlin for Android. This approach gives you full control and access to all device features, but it means you’ll have to maintain two completely separate codebases.
+- **Native Development**: Writing separate apps in Swift/Objective-C (iOS) and Java/Kotlin (Android). Offers full control and best performance but requires maintaining two codebases.
 
-- **Cordova/PhoneGap**: These frameworks let you build mobile apps using web technologies like HTML, CSS, and JavaScript. They’re simpler if you’re already familiar with web development, but they often don’t feel as “native” and might run slower compared to React Native or Flutter.
+- **Cordova/PhoneGap**: Build apps with web tech (HTML, CSS, JavaScript). Easier for web devs but apps often feel less “native” and perform slower compared to React Native or Flutter.
 
 ## Conclusion & Tips for learning this language/framework.
 
 <!--- - Wrap things up
 - Provide links to resources that you used to help you learn the language. --->
 
-React Native is a fantastic framework for building mobile apps that run on both iOS and Android with a single codebase. It uses familiar React concepts, making it easier if you already know React for the web. As you learn React Native, remember to practice building small projects and explore its core components and navigation patterns.
+React Native is a powerful framework that lets you build mobile apps for iOS and Android from a single codebase using familiar React concepts. It’s an excellent choice if you already know React or want to leverage your JavaScript skills for mobile development.
 
 ### Tips for Learning React Native:
 
-- Start by understanding React fundamentals (components, props, state).
-- Use Expo for quick setup and easier development.
-- Explore React Native’s core components and try building simple interfaces.
-- Experiment with navigation libraries like React Navigation.
-- Join React Native communities online for support and tips.
-- Debug patiently and use tools like React Native Debugger and Flipper.
+- Master React fundamentals first: components, props, state.
+- Use Expo for faster setup and development cycles.
+- Build simple projects focusing on core components.
+- Experiment with React Navigation to handle app navigation.
+- Join React Native communities for support and real-world tips.
+- Debug patiently using tools like React Native Debugger and Flipper.
+- When ready, explore React Native CLI for native customization.
 
 ### Helpful Resources:
 
