@@ -67,6 +67,7 @@ You can start a React Native project using two popular approaches:
       #  Image Picker (`expo-image-picker`)
       #      Location (`expo-location`)
       # Notifications (`expo-notifications`)
+      #            ...etc.
       ```
 
     - **Expo Snack**: a web-based playground where you can write React Native snippets and run them in the browser.
@@ -125,6 +126,7 @@ import {
 const CoreComponentsExample = () => {
   // Initializes a state variable 'name' and its setter 'setName', with an initial value of an empty string.
   const [name, setName] = useState("");
+
   // When the button is pressed, show an alert greeting using 'name' or defaults to 'stranger' if 'name' is empty.
   const handlePress = () => {
     alert(`Hello, ${name || "stranger"}!`);
@@ -134,20 +136,21 @@ const CoreComponentsExample = () => {
     {/* Core components */}
     {/* <ScrollView> - Scrollable Content */}
     <ScrollView contentContainerStyle={styles.container}>
-      {/* <Text> - Display Text */}
+
+     {/* <Text> - Display Text */}
       <Text style={styles.heading}>Welcome to React Native!</Text>
 
       {/* <Image> - Shows images (remote, local, or base64) */}
-      {/* Remote Image */}
+      {/* 1. Remote Image */}
       <Image
         source={{ uri: "https://reactnative.dev/img/tiny_logo.png" }}
         style={styles.image}
       />
 
-      {/* Local Image */}
+      {/* 2. Local Image */}
       <Image source={require("./local/asset.jpg")} />
 
-      {/* Base64 image */}
+      {/* 3. Base64 image */}
       <Image source={{ uri: "data:image/png;base64,<base64-string>=" }} />
 
       {/* <TextInput> - User Input */}
@@ -237,7 +240,6 @@ const styles = StyleSheet.create({
   box: {
     width: 100,
     height: 100,
-    backgroundColor: props.color,
   },
 });
 ```
@@ -321,14 +323,45 @@ Here are the 3 most common types:
 
 ## Compare and Contrast
 
-- For programming languages: What are the key differences between the new language and JavaScript? What are the commonalities?
-- For frameworks (including React and Express): What are the alternatives to this framework? Can you compare this framework to anything we've learned in the Core Curriculum? What are the tradeoffs when choosing this framework compared to the alternatives?
+<!--- - For programming languages: What are the key differences between the new language and JavaScript? What are the commonalities?
+- For frameworks (including React and Express): What are the alternatives to this framework? Can you compare this framework to anything we've learned in the Core Curriculum? What are the tradeoffs when choosing this framework compared to the alternatives? --->
+
+### React Native's Alternative
+
+- **Flutter**: This is a popular choice from Google that uses the Dart programming language. Flutter provides a single codebase for iOS and Android with a built-in UI toolkit. Many developers find its performance and consistent design appealing, though learning Dart can add an extra learning curve.
+
+- **Native Development**: You can also write separate apps using Swift/Objective-C for iOS and Java/Kotlin for Android. This approach gives you full control and access to all device features, but it means you’ll have to maintain two completely separate codebases.
+
+- **Cordova/PhoneGap**: These frameworks let you build mobile apps using web technologies like HTML, CSS, and JavaScript. They’re simpler if you’re already familiar with web development, but they often don’t feel as “native” and might run slower compared to React Native or Flutter.
 
 ## Conclusion & Tips for learning this language/framework.
 
-- Wrap things up
-- Provide links to resources that you used to help you learn the language.
+<!--- - Wrap things up
+- Provide links to resources that you used to help you learn the language. --->
 
-```
+React Native is a fantastic framework for building mobile apps that run on both iOS and Android with a single codebase. It uses familiar React concepts, making it easier if you already know React for the web. As you learn React Native, remember to practice building small projects and explore its core components and navigation patterns.
 
-```
+### Tips for Learning React Native:
+
+- Start by understanding React fundamentals (components, props, state).
+- Use Expo for quick setup and easier development.
+- Explore React Native’s core components and try building simple interfaces.
+- Experiment with navigation libraries like React Navigation.
+- Join React Native communities online for support and tips.
+- Debug patiently and use tools like React Native Debugger and Flipper.
+
+### Helpful Resources:
+
+**Documentation**:
+
+- [React Native Documentation](https://reactnative.dev/docs/getting-started)
+- [Expo Documentation](https://docs.expo.dev/)
+- [React Navigation](https://reactnavigation.org/)
+
+**Course**:
+
+- [Learn React Native Course | Codecademy](https://www.codecademy.com/enrolled/courses/learn-react-native)
+
+**YouTube**:
+
+- [React Native Course for Beginners in 2025 | Build a Full Stack React Native App (JavaScript Mastery)](https://www.youtube.com/watch?v=f8Z9JyB2EIE)
