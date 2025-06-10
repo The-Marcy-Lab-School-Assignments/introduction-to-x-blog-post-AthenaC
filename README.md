@@ -17,13 +17,13 @@ Meta released React Native in 2015 and by 2018, React Native had the 2nd highest
 
 React Native is like a language translator who takes a single language (JavaScript/TypeScript/React) and interprets it fluently for different countries (iOS and Android). You speak one, and your message is understood everywhere.
 
-## Core syntax/features. 
+<!--- ## Core syntax/features. 
 
-<!--- - For programming languages: data types, variables, code blocks, functions, conditionals, arrays and objects, and iteration. Include code snippets with explanations.
+ - For programming languages: data types, variables, code blocks, functions, conditionals, arrays and objects, and iteration. Include code snippets with explanations.
 
 - For frameworks (including React and Express): setup/installation/configurations, core concepts, key methods or approaches. Include code snippets with explanations. --->
 
-### Set Up / Installation
+## Set Up / Installation
 
 You can start a React Native project using two popular approaches:
 
@@ -97,7 +97,7 @@ You can start a React Native project using two popular approaches:
   npx react-native run-android
   ```
 
-### Core Concepts
+## Core Concepts
 
 **_Core components_** are the basic building blocks provided by React Native that you can use to build your app’s user interface. Think of them like Lego bricks that come ready-to-use! Here are some examples:
 
@@ -183,6 +183,8 @@ export const Box = ({ color }) => (
 );
 ```
 
+## Styling
+
 Components can be styled using the `style={}` property, which accepts objects as inline-styling, style created by `StyleSheet`, or an array combining multiple styles.
 
 ```js
@@ -240,7 +242,21 @@ const styles = StyleSheet.create({
 });
 ```
 
-### Key Methods
+## Navigation Methods
+
+### Three Types of Navigation
+
+> #### Stack Navigation
+>
+> Imagine stacking pages on top of each other like a **stack of books**. You move from screen to screen, and each one sits on top of the previous one. Users can press a back button to "pop" the top screen off and go back.
+>
+> #### Tab Navigation
+>
+> Think of a **tab bar** at the bottom of your app (like on Instagram or Twitter) where you can tap different icons to switch between pages instantly.
+>
+> #### Drawer Navigation
+>
+> A **hidden menu** that slides in from the side when you swipe or tap a menu button (like the hamburger menu in many apps). It lets users switch between screens quickly.
 
 ## Compare and Contrast
 
