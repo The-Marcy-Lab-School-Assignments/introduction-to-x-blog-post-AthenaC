@@ -1,8 +1,6 @@
-# Blog Title
+# React-ively Navigating React Native
 
 By Athena Chang
-
-(Customize these headings!)
 
 ## Introduction
 
@@ -134,7 +132,7 @@ const CoreComponentsExample = () => {
   };
 
   return (
-    {/* Core components */}
+    {/* Core Components */}
     {/* <ScrollView> - Scrollable Content */}
     <ScrollView contentContainerStyle={styles.container}>
 
@@ -198,8 +196,10 @@ You style components using the style prop, which can accept:
 ```js
 // Using StyleSheet
 <Text style={styles.heading} />
+
 // Inline-styling
 <Text style={{ fontSize: 24 }} />
+
 // Array of combined styling
 <Text style={[styles.heading, { color: 'red' }]} />
 ```
@@ -292,7 +292,7 @@ Here are the 3 most common types:
 
 > Like a stack of books, screens are stacked on top of each other. You can move forward by pushing screens and go back by popping the top screen.
 >
-> - `createStackNavigator`: To make a stack navigation (the "book stack" metaphor). It gives you a Navigator component that holds all your stack screens.
+> - `createStackNavigator`: Stack Navigator component to hold all your stack screens.
 >
 > ```js
 > const Stack = createStackNavigator();
@@ -359,12 +359,12 @@ Here are the 3 most common types:
 > export default GoToProfileButton;
 > ```
 
-## Compare and Contrast
+<!--- ## Compare and Contrast
 
-<!--- - For programming languages: What are the key differences between the new language and JavaScript? What are the commonalities?
+- For programming languages: What are the key differences between the new language and JavaScript? What are the commonalities?
 - For frameworks (including React and Express): What are the alternatives to this framework? Can you compare this framework to anything we've learned in the Core Curriculum? What are the tradeoffs when choosing this framework compared to the alternatives? --->
 
-### React Native's Alternative
+## React Native's Alternative
 
 - **Flutter**: A Google framework using Dart language. It compiles to native code and offers a consistent UI with a rich widget set. Learning Dart is an extra step, but many love its performance and design flexibility.
 
@@ -372,14 +372,14 @@ Here are the 3 most common types:
 
 - **Cordova/PhoneGap**: Build apps with web tech (HTML, CSS, JavaScript). Easier for web devs but apps often feel less “native” and perform slower compared to React Native or Flutter.
 
-## Conclusion & Tips for learning this language/framework.
+## Conclusion
 
 <!--- - Wrap things up
 - Provide links to resources that you used to help you learn the language. --->
 
 React Native is a powerful framework that lets you build mobile apps for iOS and Android from a single codebase using familiar React concepts. It’s an excellent choice if you already know React or want to leverage your JavaScript skills for mobile development.
 
-### Tips for Learning React Native:
+## Tips for Learning React Native:
 
 - Master React fundamentals first: components, props, state.
 - Use Expo for faster setup and development cycles.
