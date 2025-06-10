@@ -56,29 +56,17 @@ You can start a React Native project using two popular approaches:
 
     - **Expo SDK**: a modular set of packages that provide access to native APIs, like:
 
-      - Camera (`expo-camera`)
+      - Installation:
 
       ```bash
-      npx expo install expo-camera
+      # Run install command + the package you want
+      npx expo install ______
       ```
 
-      - Image Picker (`expo-image-picker`)
-
-      ```bash
-      npx expo install expo-image-picker
-      ```
-
-      - Location (`expo-location`)
-
-      ```bash
-      npx expo install expo-location
-      ```
-
-      - Notifications (`expo-notifications`)
-
-      ```bash
-      npx expo install expo-notifications
-      ```
+          - Camera (`expo-camera`)
+          - Image Picker (`expo-image-picker`)
+          - Location (`expo-location`)
+          - Notifications (`expo-notifications`)
 
     - **Expo Snack**: a web-based playground where you can write React Native snippets and run them in the browser.
 
