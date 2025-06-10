@@ -38,10 +38,12 @@ You can start a React Native project using two popular approaches:
       ```bash
       # Installs Expo command-line tools globally
       npm install -g expo-cli
+
       # Creates a new Expo app
-      expo init my-first-react-native-app
-      # Moves you into my-first-react-native folder
-      cd my-first-react-native-app
+      expo init my-first-app
+
+      # Move into my-first-app folder
+      cd my-first-app
       ```
 
     - **Expo Go**: an app you can download on your phone to “view” your app in development
@@ -67,18 +69,32 @@ You can start a React Native project using two popular approaches:
       # Notifications (`expo-notifications`)
       ```
 
-    - **Expo Snack**: a web-based playground where you can write React Native snippets and run them in the browser.  
-      _Steps_:
-
-    1. Visit [snack.expo.dev](https://snack.expo.dev/)
-    2. Write your code in the online editor.
-    3. Use the QR code to preview on your device (Expo Go app).
-    4. Share the link with others to collaborate or demonstrate.
+    - **Expo Snack**: a web-based playground where you can write React Native snippets and run them in the browser.
+          
+      - *Steps*:
+        1. Visit [snack.expo.dev](https://snack.expo.dev/)
+        2. Write your code in the online editor.
+        3. Use the QR code to preview on your device (Expo Go app).
+        4. Share the link with others to collaborate or demonstrate.
+        
 
 - **React Native CLI**: More advanced, lets you work with native code directly, needed for some custom native modules.
   - _Setup_:
   ```bash
-  npx react-native init MyFirstApp
+  # Installing React Native CLI
+  npm install -g react-native-cli  
+
+  # Creating a new project
+  npx react-native init my-first-app
+
+  # Move into my-first-app folder
+  cd my-first-app
+
+  # Running the app for iOS (macOS only)
+  npx react-native run-ios  
+
+  # For Android (requires emulator or connected device)
+  npx react-native run-android  
   ```
 
 ### Core Concepts
