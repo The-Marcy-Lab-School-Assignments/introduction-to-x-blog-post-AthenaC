@@ -1,4 +1,4 @@
-# React-ively Navigating React Native
+# Reactively Navigating React Native
 
 By Athena Chang
 
@@ -25,7 +25,7 @@ Think of React Native like a language translator who takes a single language (Ja
 
 You can start a React Native project using two popular approaches:
 
-- **Expo**: Beginner-friendly platform, no native code required at first, easy to set up, and lots of pre-built APIs to speend development. Expo helps you develop, build, deploy, and iterate on universal React apps quickly.
+- **Expo**: Beginner-friendly platform, no native code required at first, easy to set up, and lots of pre-built APIs to speed development. Expo helps you develop, build, deploy, and iterate on universal React apps quickly.
 
   - _Features_:
 
@@ -283,7 +283,7 @@ npm install react-native-screens react-native-safe-area-context react-native-ges
 React Navigation offers various navigation patterns, each created with a factory function:
 
 ```js
-create<Type>Navigator().
+create < Type > Navigator();
 ```
 
 Here are the 3 most common types:
