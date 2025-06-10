@@ -36,7 +36,7 @@ You can start a React Native project using two popular approaches:
       - _Setup_:
 
       ```bash
-      # Installs Expo command-line tools
+      # Installs Expo command-line tools globally
       npm install -g expo-cli
       # Creates a new Expo app
       expo init my-first-react-native-app
@@ -54,7 +54,32 @@ You can start a React Native project using two popular approaches:
       # Scan the QR code with the Expo Go app on your phone to run your app instantly!
       ```
 
-    - **Expo SDK**: a modular set of packages that provide access to native APIs, like Camera or Notifications
+    - **Expo SDK**: a modular set of packages that provide access to native APIs, like:
+
+      - Camera (`expo-camera`)
+
+      ```bash
+      npx expo install expo-camera
+      ```
+
+      - Image Picker (`expo-image-picker`)
+
+      ```bash
+      npx expo install expo-image-picker
+      ```
+
+      - Location (`expo-location`)
+
+      ```bash
+      npx expo install expo-location
+      ```
+
+      - Notifications (`expo-notifications`)
+
+      ```bash
+      npx expo install expo-notifications
+      ```
+
     - **Expo Snack**: a web-based playground where you can write React Native snippets and run them in the browser.
 
 - **React Native CLI**: More advanced, lets you work with native code directly, needed for some custom native modules.
