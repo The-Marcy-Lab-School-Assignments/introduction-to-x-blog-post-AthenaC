@@ -30,38 +30,45 @@ Whether you're new to React Native or just curious about mobile development, thi
 
 ## Table of Contents
 
-1. Set Up / Installation
+1. [Set Up / Installation](#setup)
 
-- Expo CLI
-- React Native CLI
-- Expo Go and Snack
+- [Expo](#expo)
+- [Expo CLI](#expo-cli)
+- [Expo Go](#expo-go)
+- [Expo SDK](#expo-sdk)
+- [Expo Snack](#expo-snack)
+- [React Native CLI](#react-native-cli)
 
 2. Core Concepts
 
-- Core Components
-- Custom Components
+- [Core Components](#core)
+- [Custom Components](#custom)
 
-3. Styling in React Native
+3. [Styling in React Native](#styling)
 
-- `StyleSheet`
-- Inline & Combined Styling
+- [Inline & Combined Styling](#styling)
+- [`StyleSheet`](#stylesheet)
 
-4. Navigation Methods
+4. [Navigation Methods](#navigation)
 
-- Stack, Tab, and Drawer Navigation
-- `NavigationContainer`
-- `useNavigation` Hook
+- [`NavigationContainer`](#navigation-container)
+- [Types of Navigation & Their Factory Methods](#navigation-types)
+- [Stack Navigation](#stack)
+- [Tab Navigation](#tab)
+- [Drawer Navigation](#drawer)
+- [`useNavigation` Hook](#use-navigation)
 
-5. Alternatives to React Native
+5. [Alternatives to React Native](#alternatives)
 
-- Flutter
-- Native iOS/Android
-- Cordova/PhoneGap
+- [Flutter](#flutter)
+- [Native iOS/Android](#native)
+- [Cordova/PhoneGap](#cordova)
 
-6. Conclusion & Tips
+6. [Conclusion](#conclusion)
 
-- Learning Tips
-- Helpful Resources
+7. [Learning Tips](#tips)
+
+8. [Helpful Resources](#resources)
 
 <!--- ## Core syntax/features. 
 
