@@ -9,11 +9,57 @@ By Athena Chang
 - What is it used for? How popular is it? Who is it for (developers or users)?
 - Incorporate real-world analogies when appropriate and useful. --->
 
-React Native is an open-source framework for building Android and iOS applications. It allows developers to write apps using JavaScript and TypeScript (a superset of JavaScript that adds static typing), combined with React, which are then compiled into native app components. Native code refers to platform-specific instructions that React Native generates, enabling near-native performance with the flexibility and ease of web development.
+React Native is an open-source framework that lets you build mobile apps for both Android and iOS—using JavaScript. If you've ever dreamed of building your own app but felt overwhelmed by learning multiple mobile programming languages (like Swift for iOS or Kotlin for Android), React Native is a game-changer. It lets you use familiar web development skills to create fully functional mobile apps. In fact, React Native was created with JavaScript developers in mind.
 
-Meta released React Native in 2015, and by 2018 it had the second highest number of contributors from individuals and companies worldwide among all GitHub repositories. React Native is widely popular and used in thousands of apps you’ve likely interacted with.
+Since Meta released React Native in 2015, it’s grown explosively in popularity. By 2018, it had the second-highest number of contributors among all GitHub repositories worldwide. Today, it powers thousands of mobile apps, including ones you probably use every day.
 
-Think of React Native like a language translator who takes a single language (JavaScript/TypeScript/React) and fluently interprets it for different countries (iOS and Android). You speak one language, and your message is understood everywhere.
+Think of React Native like a language translator: you write in one language (JavaScript/TypeScript/React), and it fluently interprets your app for both iOS and Android so your message is understood everywhere.
+
+## What This Blog Will Cover
+
+In this post, I’ll walk you through how to:
+
+- Set up a brand-new React Native app using Expo,
+- Preview your app live while you build it,
+- Create and style core components,
+- And build out navigation so your app can have multiple pages (like a feed and a profile).
+
+Whether you're new to React Native or just curious about mobile development, this blog is your guide to getting started quickly and confidently.
+
+## Table of Contents
+
+1. Set Up / Installation
+
+- Expo CLI
+- React Native CLI
+- Expo Go and Snack
+
+2. Core Concepts
+
+- Core Components
+- Custom Components
+
+3. Styling in React Native
+
+- StyleSheet
+- Inline & Combined Styling
+
+4. Navigation Methods
+
+- Stack, Tab, and Drawer Navigation
+- `NavigationContainer`
+- `useNavigation` Hook
+
+5. Alternatives to React Native
+
+- Flutter
+- Native iOS/Android
+- Cordova/PhoneGap
+
+6. Conclusion & Tips
+
+- Learning Tips
+- Helpful Resources
 
 <!--- ## Core syntax/features. 
 
