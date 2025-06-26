@@ -9,11 +9,13 @@ By Athena Chang
 - What is it used for? How popular is it? Who is it for (developers or users)?
 - Incorporate real-world analogies when appropriate and useful. --->
 
-React Native is an open source framework that lets you build mobile apps for both Android and iOS using JavaScript. If you've ever dreamed of building your own app but felt overwhelmed by learning multiple mobile programming languages like Swift for iOS or Kotlin for Android, React Native is a game changer. It allows you to use familiar web development skills to create fully functional mobile apps. In fact, React Native was created with JavaScript developers in mind.
+Before frameworks like React Native, creating a mobile app meant writing two entirely separate codebases: one in Swift or Objective-C for iOS, and another in Java or Kotlin for Android. These languages are known as native code, which refers to code that runs directly on a mobile device’s operating system. This approach was not only time consuming but also required developers to learn and maintain two completely different programming languages and environments just to build the same app twice.
 
-Since Meta released React Native in 2015, it has grown explosively in popularity. By 2018, it had the second highest number of contributors among all GitHub repositories worldwide. Today, it powers thousands of mobile apps, including ones you probably use every day.
+React Native changes that. It is an open source framework that lets you build mobile apps for both Android and iOS using JavaScript. If you have ever dreamed of creating an app but felt overwhelmed by the need to learn multiple mobile programming languages, React Native is a game changer. It allows you to use the web development skills you already have to create fully functional, cross-platform mobile apps. React Native was built with JavaScript developers in mind.
 
-Think of React Native like a language translator. You write in one language, such as JavaScript, TypeScript, or React, and it fluently interprets your app for both iOS and Android so your message is understood everywhere.
+Since Meta released React Native in 2015, it has grown rapidly in popularity. By 2018, it had the second highest number of contributors of any GitHub repository. Today, it powers thousands of mobile apps, including many you likely use every day.
+
+Think of React Native like a language translator. You write your code in JavaScript, TypeScript, or React, and React Native fluently interprets it for both iOS and Android so your app can speak the right language no matter where it runs.
 
 ## What This Blog Will Cover
 
@@ -41,7 +43,7 @@ Whether you're new to React Native or just curious about mobile development, thi
 
 3. Styling in React Native
 
-- StyleSheet
+- `StyleSheet`
 - Inline & Combined Styling
 
 4. Navigation Methods
@@ -69,77 +71,83 @@ Whether you're new to React Native or just curious about mobile development, thi
 
 ## Set Up / Installation
 
-You can start a React Native project using two popular approaches:
+There are two common ways to start building with React Native. Each option has its strengths depending on your experience level and what you want to build.
 
-- **Expo**: Beginner-friendly platform, no native code required at first, easy to set up, and lots of pre-built APIs to speed development. Expo helps you develop, build, deploy, and iterate on universal React apps quickly.
+### 1. Expo (Beginner Friendly)
 
-  - _Features_:
+Expo is a powerful toolkit that makes it easy to build and test mobile apps without needing to touch native code. It handles a lot of setup behind the scenes so you can focus on writing JavaScript and seeing your app in action right away.
 
-    - **Expo CLI**: A tool to create, manage, and develop your apps.
+Some key tools and features that come with Expo include:
 
-      - _Setup_:
+- **Expo CLI**: This command-line tool helps you create, develop, and manage your Expo projects.
 
-      ```bash
-      # Installs Expo command-line tools globally
-      npm install -g expo
-
-      # Creates a new Expo app
-      expo init my-first-app
-
-      # Move into my-first-app folder
-      cd my-first-app
-      ```
-
-    - **Expo Go**: An app for your phone to preview your app during development.
-
-      - _Usage_:
-
-      ```bash
-      # Download Expo Go app then run...
-      npm start
-      # Scan the QR code with the Expo Go app on your phone to run your app instantly!
-      ```
-
-    - **Expo SDK**: A modular set of packages providing access to native device APIs, such as:
-
-      - Installation:
-
-      ```bash
-      # Run install command + the package you want
-      npx expo install ______
-      #        Camera (`expo-camera`)
-      #  Image Picker (`expo-image-picker`)
-      #      Location (`expo-location`)
-      # Notifications (`expo-notifications`)
-      #            ...etc.
-      ```
-
-    - **Expo Snack**: A web-based playground to write and run React Native snippets in your browser.
-      - _Steps_:
-        1. Visit [snack.expo.dev](https://snack.expo.dev/)
-        2. Write your code in the online editor.
-        3. Use the QR code to preview on your device with Expo Go.
-        4. Share your project link to collaborate or demonstrate.
-
-- **React Native CLI**: More advanced setup allowing direct work with native code, required for some custom native modules or integrations.
-
-  - _Setup_:
+  - _How to set it up_:
 
   ```bash
-  # Create a new React Native project using CLI (no global install needed)
-  npx react-native init my-first-app
+  # Installs Expo command-line tools globally
+  npm install -g expo
 
-  # Navigate into your project folder
+  # Creates a new Expo app
+  expo init my-first-app
+
+  # Move into my-first-app folder
   cd my-first-app
-
-  # Run the app on iOS (macOS only)
-  npx react-native run-ios
-
-  # Run the app on Android (requires emulator or connected device)
-  npx react-native run-android
   ```
 
-  > **Note**: React Native CLI requires you to install Android Studio for Android development and Xcode for iOS development.
+- **Expo Go**: A mobile app that lets you preview your project instantly on your phone.
+
+  - _How to use it_:
+
+  ```bash
+  # Download Expo Go app then run...
+  npm start
+  # Scan the QR code in your terminal with the Expo Go app to run your project live on your device.
+  ```
+
+- **Expo SDK**: A set of packages that allow you to access native device features like the camera, location, and notifications.
+
+  - _To install specific features_:
+
+  ```bash
+  # Run install command + the package you want
+  npx expo install expo-______
+  #             Camera (`camera`)
+  #       Image Picker (`image-picker`)
+  #           Location (`location`)
+  #      Notifications (`notifications`)
+  #                    ...etc.
+  ```
+
+- **Expo Snack**: An online playground where you can experiment with React Native code directly in the browser. No setup required.
+  - _To try it out_:
+    1. Visit [snack.expo.dev](https://snack.expo.dev/)
+    2. Write your code in the online editor.
+    3. Use the QR code to preview on your device with Expo Go.
+    4. Share your project link to collaborate or demonstrate.
+
+### 2. React Native CLI (Advanced)
+
+If you need more control or plan to integrate custom native modules, the React Native CLI gives you direct access to native code. This setup is more flexible but also more involved.
+
+- _How to set it up_:
+
+```bash
+# Create a new React Native project using CLI (no global install needed)
+npx react-native init my-first-app
+
+# Navigate into your project folder
+cd my-first-app
+
+# Run the app on iOS (macOS only)
+npx react-native run-ios
+
+# Run the app on Android (requires emulator or connected device)
+npx react-native run-android
+```
+
+> **Note**: For this approach, you must install Android Studio for Android development and Xcode for iOS development.
+
+Now that your project is set up, let’s explore how to build the user interface using the building blocks of React Native known as core components.
 
 ## Core Concepts
 
@@ -410,30 +418,42 @@ Here are the 3 most common types:
 - For programming languages: What are the key differences between the new language and JavaScript? What are the commonalities?
 - For frameworks (including React and Express): What are the alternatives to this framework? Can you compare this framework to anything we've learned in the Core Curriculum? What are the tradeoffs when choosing this framework compared to the alternatives? --->
 
-## React Native's Alternative
+## Alternatives to React Native
 
-- **Flutter**: A Google framework using Dart language. It compiles to native code and offers a consistent UI with a rich widget set. Learning Dart is an extra step, but many love its performance and design flexibility.
+While React Native is a popular choice, there are other frameworks and approaches you might come across:
 
-- **Native Development**: Writing separate apps in Swift/Objective-C (iOS) and Java/Kotlin (Android). Offers full control and best performance but requires maintaining two codebases.
+- **Flutter**: Built by Google, Flutter uses a programming language called Dart. It also compiles to native code and offers a highly customizable and consistent user interface with a large set of built-in widgets. The catch is that you’ll need to learn Dart, which is an extra step for most web developers. Still, many developers praise Flutter for its performance and flexibility.
 
-- **Cordova/PhoneGap**: Build apps with web tech (HTML, CSS, JavaScript). Easier for web devs but apps often feel less “native” and perform slower compared to React Native or Flutter.
+- **Native Development**: This means writing separate apps for iOS and Android using their respective languages—Swift or Objective-C for iOS, and Java or Kotlin for Android. Native development gives you the most control and the best performance, but it also means maintaining two entirely different codebases, which can be time-consuming and difficult to scale.
+
+- **Cordova/PhoneGap**: These frameworks let you build mobile apps using familiar web technologies like HTML, CSS, and JavaScript. While this approach is easier for web developers to pick up, apps built this way often don’t feel as smooth or performant as those built with React Native or Flutter.
 
 ## Conclusion
 
 <!--- - Wrap things up
 - Provide links to resources that you used to help you learn the language. --->
 
-React Native is a powerful framework that lets you build mobile apps for iOS and Android from a single codebase using familiar React concepts. It’s an excellent choice if you already know React or want to leverage your JavaScript skills for mobile development.
+React Native is a powerful and accessible framework that allows you to build mobile apps for both iOS and Android using one codebase—and one language, JavaScript. If you’re already familiar with React or web development, React Native is a natural next step that opens the door to the world of mobile app creation.
+
+Whether you’re building your first app or exploring a new framework, React Native makes mobile development more approachable, more efficient, and more fun.
 
 ## Tips for Learning React Native:
 
-- Master React fundamentals first: components, props, state.
-- Use Expo for faster setup and development cycles.
-- Build simple projects focusing on core components.
-- Experiment with React Navigation to handle app navigation.
-- Join React Native communities for support and real-world tips.
-- Debug patiently using tools like React Native Debugger and Flipper.
-- When ready, explore React Native CLI for native customization.
+Getting started with React Native can feel like a lot, but breaking it down into smaller steps makes it manageable. Here are some helpful tips to guide your learning:
+
+- **Start with React basics**: Make sure you're comfortable with React fundamentals like components, props, and state. These skills transfer directly into React Native.
+
+- **Use Expo to your advantage**: Expo makes setup simple and allows you to preview your app instantly. It's perfect for beginners who want to jump right into building.
+
+- **Build small projects**: Practice by creating simple apps, such as a to-do list, a weather app, or a photo gallery. Focus on using core components and layout techniques.
+
+- **Learn by doing**: Don’t worry about being perfect at first. The best way to learn is by building and making mistakes along the way.
+
+- **Explore navigation early**: Understanding how to switch between screens is essential for building full apps. React Navigation is the go-to tool for this.
+
+- **Use community tools**: Tools like Flipper and React Native Debugger can help you troubleshoot and inspect your app during development.
+
+- **Connect with the community**: Join forums, Discord groups, or follow React Native developers on social media to stay motivated and get help when you're stuck.
 
 ### Helpful Resources:
 
@@ -446,7 +466,9 @@ React Native is a powerful framework that lets you build mobile apps for iOS and
 **Course**:
 
 - [Learn React Native Course | Codecademy](https://www.codecademy.com/enrolled/courses/learn-react-native)
+- [freeCodeCamp’s React Native Crash Course](https://www.youtube.com/watch?v=0-S5a0eXPoc)
+- [JavaScript Mastery: Full Stack React Native App](https://www.youtube.com/watch?v=f8Z9JyB2EIE)
 
-**YouTube**:
+**Playgrounds and Practice**:
 
-- [React Native Course for Beginners in 2025 | Build a Full Stack React Native App (JavaScript Mastery)](https://www.youtube.com/watch?v=f8Z9JyB2EIE)
+- [Expo Snack (Try React Native in the browser)](https://snack.expo.dev/)
