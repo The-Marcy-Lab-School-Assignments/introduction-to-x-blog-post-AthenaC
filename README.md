@@ -9,11 +9,11 @@ By Athena Chang
 - What is it used for? How popular is it? Who is it for (developers or users)?
 - Incorporate real-world analogies when appropriate and useful. --->
 
-React Native is an open-source framework that lets you build mobile apps for both Android and iOS—using JavaScript. If you've ever dreamed of building your own app but felt overwhelmed by learning multiple mobile programming languages (like Swift for iOS or Kotlin for Android), React Native is a game-changer. It lets you use familiar web development skills to create fully functional mobile apps. In fact, React Native was created with JavaScript developers in mind.
+React Native is an open source framework that lets you build mobile apps for both Android and iOS using JavaScript. If you've ever dreamed of building your own app but felt overwhelmed by learning multiple mobile programming languages like Swift for iOS or Kotlin for Android, React Native is a game changer. It allows you to use familiar web development skills to create fully functional mobile apps. In fact, React Native was created with JavaScript developers in mind.
 
-Since Meta released React Native in 2015, it’s grown explosively in popularity. By 2018, it had the second-highest number of contributors among all GitHub repositories worldwide. Today, it powers thousands of mobile apps, including ones you probably use every day.
+Since Meta released React Native in 2015, it has grown explosively in popularity. By 2018, it had the second highest number of contributors among all GitHub repositories worldwide. Today, it powers thousands of mobile apps, including ones you probably use every day.
 
-Think of React Native like a language translator: you write in one language (JavaScript/TypeScript/React), and it fluently interprets your app for both iOS and Android so your message is understood everywhere.
+Think of React Native like a language translator. You write in one language, such as JavaScript, TypeScript, or React, and it fluently interprets your app for both iOS and Android so your message is understood everywhere.
 
 ## What This Blog Will Cover
 
